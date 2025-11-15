@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="dashboard">
+    <div class="dashboard-container">
+      <nav class="sidebar">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="dashboard.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li class="nav-item active">
+            <a href="products.html"><i class="fas fa-box"></i> Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="#"><i class="fas fa-shopping-cart"></i> Sales</a>
+          </li>
+          <li class="nav-item">
+            <a href="#"><i class="fas fa-dollar-sign"></i> Revenue</a>
+          </li>
+          <li class="nav-item settings">
+            <a href="#"><i class="fas fa-cog"></i> Settings</a>
+          </li>
+        </ul>
+      </nav>
+
+      <main class="main-content">
+        <header class="header">
+          <img
+            src="img/product_data_list.png"
+            alt="Product Data List Logo"
+            class="logo"
+          />
+        </header>
+
+        <table class="products-table">
+          <thead>
+            <tr>
+              <th class="no-col">No</th>
+              <th>Product Name</th>
+              <th>Price</th>
+              <th class="stock">Stock</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="products-tbody"></tbody>
+        </table>
+
+        <div class="products-footer">
+          <button class="add-btn">
+            <i class="fas fa-plus"></i> Add Product
+          </button>
+        </div>
+      </main>
+    </div>
+
+    <div class="modal-overlay" id="delete-modal">
+      <div class="modal-content">
+        <h2>Konfirmasi Hapus</h2>
+        <p id="modal-message"></p>
+        <div class="modal-buttons">
+          <button
+            class="modal-btn modal-btn-cancel"
+            onclick="closeDeleteModal()"
+          >
+            Batal
+          </button>
+          <button class="modal-btn modal-btn-delete" onclick="confirmDelete()">
+            Hapus
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

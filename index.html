@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="form-image">
+        <img src="img/form_cover.png" alt="Form Cover Image" />
+      </div>
+
+      <div class="form-content">
+        <img
+          src="img/welcome_to_sora_store.png"
+          class="logo"
+          alt="Sora Store Logo"
+        />
+
+        <form id="login-form">
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" placeholder="Email address" />
+          </div>
+
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="password" placeholder="Password" />
+          </div>
+
+          <a href="#" class="forgot-pass">Forgot Password?</a>
+
+          <button type="submit" class="login-button">LOGIN</button>
+        </form>
+
+        <div class="separator">
+          <span>Or</span>
+        </div>
+
+        <div class="social-buttons">
+          <button type="button" class="social-btn google">
+            <i class="fab fa-google"></i> Google
+          </button>
+          <button type="button" class="social-btn facebook">
+            <i class="fab fa-facebook"></i> Facebook
+          </button>
+        </div>
+
+        <p class="signup-link">Don't have account? <a href="#">Sign Up</a></p>
+      </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="dashboard">
+    <div class="dashboard-container">
+      <nav class="sidebar">
+        <ul class="nav-menu">
+          <li class="nav-item active">
+            <a href="dashboard.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="products.html"><i class="fas fa-box"></i> Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="#"><i class="fas fa-shopping-cart"></i> Sales</a>
+          </li>
+          <li class="nav-item">
+            <a href="#"><i class="fas fa-dollar-sign"></i> Revenue</a>
+          </li>
+          <li class="nav-item settings">
+            <a href="#"><i class="fas fa-cog"></i> Settings</a>
+          </li>
+        </ul>
+      </nav>
+
+      <main class="main-content">
+        <header class="header">
+          <img
+            src="img/dashboard_sora_store.png"
+            alt="Dashboard Sora Store Logo"
+            class="logo"
+          />
+        </header>
+
+        <section class="summary-cards">
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-box"></i></div>
+            <div class="card-info">
+              <p>TOTAL PRODUCTS</p>
+              <h2 id="total-products">0</h2>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-shopping-cart"></i></div>
+            <div class="card-info">
+              <p>TOTAL SALES</p>
+              <h2 id="total-sales">0</h2>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-dollar-sign"></i></div>
+            <div class="card-info">
+              <p>TOTAL REVENUE</p>
+              <h2 id="total-revenue">Rp 0,00</h2>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
