@@ -39,6 +39,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 }
 
 .form-content {
@@ -286,8 +287,11 @@ body.dashboard {
 }
 
 .header {
+  display: flex;
+  align-items: center;
   margin-bottom: 30px;
 }
+/* vvv */
 
 .dashboard-title {
   font-size: 36px;
@@ -336,6 +340,7 @@ body.dashboard {
 .header .logo {
   height: 100px;
   padding-top: 10px;
+  margin-bottom: 20px;
 }
 
 .card-info p {
@@ -344,6 +349,31 @@ body.dashboard {
   color: #007bff;
   margin-bottom: 12px;
   text-transform: uppercase;
+}
+
+.hamburger-btn {
+  display: none; /* Sembunyi di desktop */
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--primary-color);
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999; /* Di bawah sidebar, di atas konten */
+  display: none;
+}
+
+.menu-overlay.show {
+  display: block;
 }
 
 .card-info h2 {
@@ -361,7 +391,7 @@ body.dashboard {
   }
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .dashboard-container {
     flex-direction: column;
   }
@@ -384,6 +414,136 @@ body.dashboard {
   .nav-item a {
     font-size: 14px;
     padding: 8px 12px;
+  }
+} */
+
+@media (max-width: 600px) {
+  /* .form-content .logo {
+    height: 72px;
+    margin-bottom: 15px;
+  }
+
+  header .logo {
+    height: 72px;
+    margin-bottom: 15px;
+  } */
+
+  .login-container {
+    flex-direction: column;
+    width: 95%;
+    margin: 20px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-image {
+    display: none;
+  }
+
+  .form-content {
+    flex-basis: 100%;
+    padding: 30px;
+  }
+
+  .social-buttons {
+    flex-direction: column;
+  }
+
+  .social-btn:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .hamburger-btn {
+    display: block;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    z-index: 1000;
+    transition: left 0.3s ease-in-out;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .sidebar.show {
+    left: 0;
+  }
+  .products-table thead {
+    display: none;
+  }
+
+  /* 2. Ubah baris (tr) menjadi seperti 'kartu' */
+  .products-table tr {
+    display: block;
+    margin-bottom: 15px;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--medium-gray);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  /* 3. Ubah sel (td) agar menumpuk */
+  .products-table td {
+    display: block;
+    padding: 12px 15px;
+    padding-left: 50%; /* Beri ruang untuk label */
+    text-align: right; /* Konten di kanan, label di kiri */
+    position: relative;
+    border-bottom: 1px solid var(--medium-gray);
+    font-size: 14px;
+  }
+
+  .products-table tr td:last-child {
+    border-bottom: none;
+  }
+
+  /* 4. Buat label dari atribut data-label */
+  .products-table td::before {
+    content: attr(data-label); /* Ambil teks dari data-label */
+    position: absolute;
+    left: 15px;
+    width: calc(50% - 30px); /* Lebar label */
+    text-align: left;
+    font-weight: bold;
+    color: var(--dark-gray);
+  }
+
+  /* 5. Atur kolom 'Action' agar rapi */
+  .products-table td[data-label="Action"] {
+    padding-left: 15px; /* Tidak perlu padding-left 50% */
+    text-align: left;
+  }
+
+  .products-table td[data-label="Action"]::before {
+    display: none; /* Sembunyikan label "Action" */
+  }
+
+  .products-table td.no-col::before {
+    display: none;
+  }
+
+  .products-table td.no-col {
+    padding-left: 15px; /* Hapus padding 50% */
+    text-align: left; /* Ratakan kiri */
+    font-weight: bold; /* Tebalkan angkanya */
+    font-size: 16px;
+    color: var(--primary-color); /* Bonus: Warnai agar serasi */
+  }
+
+  .action-buttons {
+    justify-content: flex-end; /* Ratakan tombol ke kanan */
+  }
+
+  /* 6. Buat tombol "Add Product" full-width */
+  .products-footer {
+    margin-top: 10px;
+  }
+
+  .add-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
   }
 }
 

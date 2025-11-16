@@ -12,7 +12,7 @@
   </head>
   <body class="dashboard">
     <div class="dashboard-container">
-      <nav class="sidebar">
+      <nav class="sidebar" id="sidebar">
         <ul class="nav-menu">
           <li class="nav-item">
             <a href="dashboard.html"><i class="fas fa-home"></i> Home</a>
@@ -29,11 +29,17 @@
           <li class="nav-item settings">
             <a href="#"><i class="fas fa-cog"></i> Settings</a>
           </li>
+          <li class="nav-item">
+            <a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+          </li>
         </ul>
       </nav>
 
       <main class="main-content">
         <header class="header">
+          <button class="hamburger-btn" id="hamburger-btn">
+            <i class="fas fa-bars"></i>
+          </button>
           <img
             src="img/product_data_list.png"
             alt="Product Data List Logo"
@@ -79,6 +85,8 @@
         </div>
       </div>
     </div>
+
+    <div class="menu-overlay" id="menu-overlay"></div>
 
     <script src="js/scripts.js"></script>
   </body>

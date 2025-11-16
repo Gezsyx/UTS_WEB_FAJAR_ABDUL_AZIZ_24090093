@@ -42,6 +42,34 @@ if (loginForm) {
   });
 }
 
+const hamburgerBtn = document.getElementById("hamburger-btn");
+const sidebar = document.getElementById("sidebar");
+const menuOverlay = document.getElementById("menu-overlay");
+
+// Hanya jalankan jika elemen-elemen ini ada di halaman
+if (hamburgerBtn && sidebar && menuOverlay) {
+  // Fungsi untuk membuka menu
+  const openMenu = () => {
+    sidebar.classList.add("show");
+    menuOverlay.classList.add("show");
+  };
+
+  // Fungsi untuk menutup menu
+  const closeMenu = () => {
+    sidebar.classList.remove("show");
+    menuOverlay.classList.remove("show");
+  };
+
+  hamburgerBtn.addEventListener("click", openMenu);
+  menuOverlay.addEventListener("click", closeMenu);
+
+  // Opsional: Tutup menu ketika item navigasi diklik
+  const navItems = document.querySelectorAll("#sidebar .nav-item a");
+  navItems.forEach((item) => {
+    item.addEventListener("click", closeMenu);
+  });
+}
+
 const productsElement = document.getElementById("total-products");
 const salesElement = document.getElementById("total-sales");
 const revenueElement = document.getElementById("total-revenue");
@@ -85,21 +113,23 @@ if (productsTableBody) {
       row.id = `product-${product.id}`;
 
       row.innerHTML = `
-        <td class="no-col">${index + 1}</td>
-        <td>${product.name}</td>
-        <td class="price">Rp ${product.price.toLocaleString("id-ID")}</td>
-        <td class="stock">${product.stock}</td>
-        <td>
-          <div class="action-buttons">
-            <button class="edit-btn" onclick="editProduct(${product.id})">
-              <i class="fas fa-edit"></i> Edit
-            </button>
-            <button class="delete-btn" onclick="deleteProduct(${product.id})">
-              <i class="fas fa-trash"></i> Delete
-            </button>
-          </div>
-        </td>
-      `;
+          <td class="no-col" data-label="No">${index + 1}</td>
+          <td data-label="Product Name">${product.name}</td>
+          <td class="price" data-label="Price">Rp ${product.price.toLocaleString(
+            "id-ID"
+          )}</td>
+          <td class="stock" data-label="Stock">${product.stock}</td>
+          <td data-label="Action">
+            <div class="action-buttons">
+              <button class="edit-btn" onclick="editProduct(${product.id})">
+                <i class="fas fa-edit"></i> Edit
+              </button>
+              <button class="delete-btn" onclick="deleteProduct(${product.id})">
+                <i class="fas fa-trash"></i> Delete
+              </button>
+            </div>
+          </td>
+        `;
 
       productsTableBody.appendChild(row);
     });
