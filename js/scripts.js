@@ -1,6 +1,7 @@
 const loginForm = document.getElementById("login-form");
 const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
+const soraGreeting = new Audio("../audio/sora_greetings.m4a");
 
 const correctEmail = "jarzzjr@gmail.com";
 const correctPassword = "24090093";
@@ -33,9 +34,12 @@ if (loginForm) {
       showNotification("Email dan password tidak boleh kosong.", "error");
     } else if (email === correctEmail && password === correctPassword) {
       showNotification("Login berhasil", "success");
+      soraGreeting.play().catch((error) => {
+        console.log("Gagal memutar audio:", error);
+      });
       setTimeout(() => {
         window.location.href = "dashboard.html";
-      }, 1500);
+      }, 1700);
     } else {
       showNotification("Email atau password salah.", "error");
     }

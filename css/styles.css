@@ -256,6 +256,7 @@ body.dashboard {
   font-size: 17px;
   font-weight: bold;
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 15px;
   padding: 12px 15px;
@@ -264,11 +265,11 @@ body.dashboard {
 }
 
 .nav-item a span {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .nav-item a i {
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .nav-item.active a,
@@ -595,7 +596,7 @@ body.dashboard {
 }
 
 .products-table tbody tr:hover {
-  background-color: #f9f9f9;
+  background-color: #e8e8e8;
 }
 
 .action-buttons {

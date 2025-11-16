@@ -15,6 +15,8 @@ DESKRIPSI :
      Email    : jarzzjr@gmail.com<br>
      Password : 24090093<br>
      Succes & Error Notification<br>
+     Memutar audio jika berhasil login<br><br>
+     *NOTE! KECILKAN VOLUME ATAU GUNAKAN EARPHONE JIKA TIDAK INGIN MENGGANGGU ORANG SEKITAR<br><br>
   2. Dashboard<br>
      Tampilan summary card berdasarkan data array pada file JavaScript<br>
      Fungsi tombol home page dan products page<br>
