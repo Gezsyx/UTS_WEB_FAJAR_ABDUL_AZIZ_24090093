@@ -46,15 +46,12 @@ const hamburgerBtn = document.getElementById("hamburger-btn");
 const sidebar = document.getElementById("sidebar");
 const menuOverlay = document.getElementById("menu-overlay");
 
-// Hanya jalankan jika elemen-elemen ini ada di halaman
 if (hamburgerBtn && sidebar && menuOverlay) {
-  // Fungsi untuk membuka menu
   const openMenu = () => {
     sidebar.classList.add("show");
     menuOverlay.classList.add("show");
   };
 
-  // Fungsi untuk menutup menu
   const closeMenu = () => {
     sidebar.classList.remove("show");
     menuOverlay.classList.remove("show");
@@ -63,7 +60,6 @@ if (hamburgerBtn && sidebar && menuOverlay) {
   hamburgerBtn.addEventListener("click", openMenu);
   menuOverlay.addEventListener("click", closeMenu);
 
-  // Opsional: Tutup menu ketika item navigasi diklik
   const navItems = document.querySelectorAll("#sidebar .nav-item a");
   navItems.forEach((item) => {
     item.addEventListener("click", closeMenu);

@@ -291,7 +291,6 @@ body.dashboard {
   align-items: center;
   margin-bottom: 30px;
 }
-/* vvv */
 
 .dashboard-title {
   font-size: 36px;
@@ -352,11 +351,12 @@ body.dashboard {
 }
 
 .hamburger-btn {
-  display: none; /* Sembunyi di desktop */
+  display: none; 
+
   background: none;
   border: none;
   font-size: 24px;
-  color: var(--primary-color);
+  color: #007bff;
   cursor: pointer;
   margin-right: 20px;
 }
@@ -368,7 +368,7 @@ body.dashboard {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 999; /* Di bawah sidebar, di atas konten */
+  z-index: 999; 
   display: none;
 }
 
@@ -418,15 +418,6 @@ body.dashboard {
 } */
 
 @media (max-width: 600px) {
-  /* .form-content .logo {
-    height: 72px;
-    margin-bottom: 15px;
-  }
-
-  header .logo {
-    height: 72px;
-    margin-bottom: 15px;
-  } */
 
   .login-container {
     flex-direction: column;
@@ -474,23 +465,21 @@ body.dashboard {
     display: none;
   }
 
-  /* 2. Ubah baris (tr) menjadi seperti 'kartu' */
   .products-table tr {
     display: block;
     margin-bottom: 15px;
-    border-radius: var(--border-radius-sm);
-    border: 1px solid var(--medium-gray);
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   }
-
-  /* 3. Ubah sel (td) agar menumpuk */
+  
   .products-table td {
     display: block;
     padding: 12px 15px;
-    padding-left: 50%; /* Beri ruang untuk label */
-    text-align: right; /* Konten di kanan, label di kiri */
+    padding-left: 50%; 
+    text-align: right; 
     position: relative;
-    border-bottom: 1px solid var(--medium-gray);
+    border-bottom: 1px solid #e0e0e0;
     font-size: 14px;
   }
 
@@ -498,25 +487,23 @@ body.dashboard {
     border-bottom: none;
   }
 
-  /* 4. Buat label dari atribut data-label */
   .products-table td::before {
-    content: attr(data-label); /* Ambil teks dari data-label */
+    content: attr(data-label); 
     position: absolute;
     left: 15px;
-    width: calc(50% - 30px); /* Lebar label */
+    width: calc(50% - 30px); 
     text-align: left;
     font-weight: bold;
-    color: var(--dark-gray);
+    color: #333;
   }
 
-  /* 5. Atur kolom 'Action' agar rapi */
   .products-table td[data-label="Action"] {
-    padding-left: 15px; /* Tidak perlu padding-left 50% */
+    padding-left: 15px; 
     text-align: left;
   }
 
   .products-table td[data-label="Action"]::before {
-    display: none; /* Sembunyikan label "Action" */
+    display: none; 
   }
 
   .products-table td.no-col::before {
@@ -524,18 +511,17 @@ body.dashboard {
   }
 
   .products-table td.no-col {
-    padding-left: 15px; /* Hapus padding 50% */
-    text-align: left; /* Ratakan kiri */
-    font-weight: bold; /* Tebalkan angkanya */
+    padding-left: 15px; 
+    text-align: left; 
+    font-weight: bold; 
     font-size: 16px;
-    color: var(--primary-color); /* Bonus: Warnai agar serasi */
+    color: #007bff; 
   }
 
   .action-buttons {
-    justify-content: flex-end; /* Ratakan tombol ke kanan */
+    justify-content: flex-end;
   }
 
-  /* 6. Buat tombol "Add Product" full-width */
   .products-footer {
     margin-top: 10px;
   }
