@@ -20,7 +20,7 @@ DESKRIPSI :
      *NOTE! TERDAPAT BUG ATAUPUN ERROR SAAT PEMUTARAN. DIMANA SAAT TEST SECARA ONLINE DENGAN GITHUB PAGE AUDIO TIDAK DAPAT BERPUTAR SEPERTI SAAT DI TEST SECARA LOCAL MENGGUNAKAN LIVE SERVER<br><br>
   2. Dashboard<br>
      Tampilan summary card berdasarkan data array pada file JavaScript<br>
-     Fungsi tombol home page dan products page<br>
+     Fungsi tombol home page dan products page<br><br>
   3. Products<br>
      Tampilan tabel data produk<br>
      Fungsi tombol home page, products page, edit data, dan delete data<br>
